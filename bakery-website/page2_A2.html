@@ -1,0 +1,207 @@
+<!--Page 2 HW2 Leen Abhari 
+Page made using FLEX layout
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            min-width: 600px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #header {
+            width: 100%;
+            height: 125px;
+            background-color: #EE7D99;
+            text-align: center;
+            color: #FBF08F;
+        }
+
+        #header img {
+            height: inherit;
+            width: inherit;
+            object-fit: contain;
+        }
+
+        #container {
+            display: flex;
+            flex: 1;
+        }
+
+        #navigation {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            background-color: #8b91c7;
+            text-align: center;
+            
+        }
+
+        #navigation::after {
+            clear: both;
+        }
+
+        .box {
+            width: 90%;
+            padding: 15px;
+            margin: 10px;
+            background-color: #fbf8df;
+            color: #8b91c7;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 1px 1px 5px #fbf8df;
+        }
+        
+        .box:hover {
+            background-color: #FBF08F;
+        }
+
+        #main {
+            background-color: #fbf8df;
+            color: #EE7D99;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #main h1{
+            box-shadow: 1px 1px 5px #d4d0ad;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .main-text {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            align-items:center ;
+            flex-wrap: wrap;
+        }
+
+        .menu-item {
+            color: #EE7D99;
+            text-align: center;
+        }
+        .menu-item img {
+            color: #EE7D99;
+            height: 130px;
+            width: 130px;
+            object-fit: cover;
+            border-radius: 9px;
+            border:2px solid #EE7D99;
+            box-shadow: 1px 1px 5px #EE7D99;
+        }
+
+        /*Responsive page for different sizes for menu pictures*/ 
+        @media (min-width: 1100px) {
+            .menu-item img {
+                height: 200px;
+                width: 200px; 
+            }
+        }
+
+        @media (max-width: 600px) {
+            .main-text {
+                font-size: smaller;
+            }
+            .menu-item img {
+                height: 100px;
+                width: 100px; 
+            }
+            .news {
+                font-size: smaller;
+            }
+            .box {
+                font-size: smaller;
+            }
+        }
+
+        #aside {
+            background-color: #8b91c7;
+            width: 25%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: #fbf8df;
+            flex-wrap: wrap;
+        }
+        #aside h4 {
+            box-shadow: 1px 1px 5px #6d729c;
+            padding: 5px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .news {
+            background-color: #fbf8df;
+            color: #8b91c7;
+            padding: 15px;
+            text-align: center;
+            margin: 15px;
+            border-radius: 8px;
+        }
+
+        #footer {
+            background-color: #EE7D99;
+            color: #FBF08F;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header"><img src="assets/images/logo.png" alt="logo"></div>
+
+    <div id="container">
+        <div id="navigation">
+            <a href="index_A2.html" class="box" style="text-decoration: none;">Home Page</a>
+        <a href="page2_A2.html" class="box" style="text-decoration: none;">Our Menu</a> 
+        <a href="page3_A2.html" class="box" style="text-decoration: none;">About Us</a>
+        </div>
+
+        <div id="main">
+            <div class="main-text"><h1><em>Our Menu!</em></h1> <br> ≽^•⩊•^≼</div>
+            <div class="menu">
+                <div class="menu-item"> <img src="assets/images/cake1.jpg" alt="cake"> <br>Kitty Cake </div>
+                <div class="menu-item"> <img src="assets/images/cookies.jpg" alt="cookies"> <br>Cookies </div>
+                <div class="menu-item"> <img src="assets/images/takoyaki.jpg" alt="takoyaki"> <br> Takoyaki </div>
+                <div class="menu-item"> <img src="assets/images/tanghulu.jpg" alt="tanghulu"> <br> Kitty Tanghulu </div>
+                <div class="menu-item"> <img src="assets/images/latte.jpg" alt="latte"> <br>Kitty Latte </div>
+                <div class="menu-item"> <img src="assets/images/matcha.jpg" alt="matcha"> <br> Bear Matcha</div>
+            </div>
+            <div id="footer"><em>Leen Abhari ISTE140 HW2 &copy</em></div>
+        </div>
+        <div id="aside"> <h4>Important!</h4>
+            <div class="news">All items are 100% Halal Certified</div>
+            <div class="news">Gluten-free upon request</div>
+        </div>
+        
+    </div>
+
+</body>
+</html>

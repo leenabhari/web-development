@@ -1,0 +1,120 @@
+<!--Page 3 HW2 Leen Abhari
+This page using GRID layout
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            height: 100%;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+
+        body {
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header"
+                "navigation"
+                "main"
+                "footer";
+
+        }
+
+        #header {
+            grid-area: header;
+            width: 100%;
+            height: 125px;
+            background-color: #EE7D99;
+            text-align: center;
+            color: #FBF08F;
+            overflow: hidden;
+        }
+
+        #header img {
+            height: inherit;
+            width: inherit;
+            object-fit: contain;
+        }
+        #navigation {
+            grid-area: navigation;
+            width: 100%;
+            background-color: #8b91c7;
+            text-align: center;
+        }
+
+        #navigation::after {
+            clear: both;
+        }
+
+        .box {
+            padding: 15px;
+            margin: 10px;
+            background-color: #fbf8df;
+            color: #8b91c7;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 1px 1px 5px #fbf8df;
+        }
+        
+        .box:hover {
+            background-color: #FBF08F;
+        }
+
+        #main {
+            grid-area: main;
+            background-color: #fbf8df ;
+            display: grid;
+            grid-template-columns: 1fr;
+            color: #EE7D99;
+            text-align: center;
+            padding: 25px;
+        }
+
+        #main img {
+            width: 300px;
+            border-radius: 8px;
+            border:4px solid #EE7D99;
+            margin: 10px;
+            justify-self: center;
+            box-shadow: 1px 1px 5px #EE7D99;
+        }
+
+        #footer {
+            grid-area: footer;
+            clear: both;
+            background-color: #EE7D99;
+            color: #FBF08F;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header"><img src="assets/images/logo.png" alt="logo"></div>
+    <div id="navigation"><a href="index_A2.html" class="box" style="text-decoration: none;">Home Page</a>
+        <a href="page2_A2.html" class="box" style="text-decoration: none;">Our Menu</a>
+        <a href="page3_A2.html" class="box" style="text-decoration: none;">About Us</a>
+    </div>
+    <div id="main">
+        <h2>About Us!</h2>
+        Founded in 2024 by the baker Leen Abhari
+        <br> <img src="assets/images/me.jpg" alt="photo of chef">
+        real photo of chef leen tehe
+
+    </div>
+    <div id="footer"><em>Leen Abhari ISTE140 HW2 &copy</em></div>
+</body>
+</html>
+
